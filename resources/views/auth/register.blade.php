@@ -19,6 +19,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
     <link href="{{ asset('assets/css/app.css') }}" rel="stylesheet">
     <link href="{{ asset('assets/css/icons.css') }}" rel="stylesheet">
+    @toastr_css
     <title>Backend - Sign Up</title>
 </head>
 
@@ -61,7 +62,8 @@
                                             <div class="col-sm-6">
                                                 <label for="inputFirstName" class="form-label">Nom</label>
                                                 <input type="text" name="first_name" class="form-control"
-                                                    id="inputFirstName" placeholder="Jhon">
+                                                    id="inputFirstName" placeholder="Jhon"
+                                                    value="{{ old('first_name') }}">
                                                 @error('first_name')
                                                     <div class="small text-danger">{{ $message }}</div>
                                                 @enderror
@@ -69,7 +71,8 @@
                                             <div class="col-sm-6">
                                                 <label for="inputLastName" class="form-label">Prénoms</label>
                                                 <input type="text" name="last_name" class="form-control"
-                                                    id="inputLastName" placeholder="Deo">
+                                                    id="inputLastName" placeholder="Deo"
+                                                    value="{{ old('last_name') }}">
                                                 @error('last_name')
                                                     <div class="small text-danger">{{ $message }}</div>
                                                 @enderror
@@ -77,7 +80,8 @@
                                             <div class="col-12">
                                                 <label for="inputEmailAddress" class="form-label">Email</label>
                                                 <input type="email" name="email" class="form-control"
-                                                    id="inputEmailAddress" placeholder="example@user.com">
+                                                    id="inputEmailAddress" placeholder="example@user.com"
+                                                    value="{{ old('email') }}">
                                                 @error('email')
                                                     <div class="small text-danger">{{ $message }}</div>
                                                 @enderror
@@ -85,7 +89,8 @@
                                             <div class="col-12">
                                                 <label for="phone" class="form-label">Téléphone</label>
                                                 <input type="tel" minlength="10" maxlength="10" name="phone"
-                                                    class="form-control" id="phone" placeholder="0102030405">
+                                                    class="form-control" id="phone" placeholder="0102030405"
+                                                    value="{{ old('phone') }}">
                                                 @error('phone')
                                                     <div class="small text-danger">{{ $message }}</div>
                                                 @enderror
@@ -183,6 +188,9 @@
     </script>
     <!--app JS-->
     <script src="{{ asset('assets/js/app.js') }}"></script>
+    @jquery
+    @toastr_js
+    @toastr_render
 </body>
 
 </html>

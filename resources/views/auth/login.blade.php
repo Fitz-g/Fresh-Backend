@@ -19,6 +19,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
     <link href="{{ asset('assets/css/app.css') }}" rel="stylesheet">
     <link href="{{ asset('assets/css/icons.css') }}" rel="stylesheet">
+    @toastr_css
     <title>Backend - Sign In</title>
 </head>
 
@@ -133,6 +134,9 @@
     </script>
     <!--app JS-->
     <script src="assets/js/app.js"></script>
+    @jquery
+    @toastr_js
+    @toastr_render
 </body>
 
 </html>

@@ -25,6 +25,7 @@
     <link rel="stylesheet" href="{{ asset('assets/css/semi-dark.css') }}" />
     <link rel="stylesheet" href="{{ asset('assets/css/header-colors.css') }}" />
     <title>@yield('title')</title>
+    @toastr_css
 </head>
 
 <body>
@@ -40,12 +41,16 @@
         <div class="page-wrapper">
             <div class="page-content-wrapper">
                 <div class="page-content">
+                    @yield('breadcrumb')
                     @yield('content')
                 </div>
             </div>
         </div>
     </div>
     <!-- Bootstrap JS -->
+    @jquery
+    @toastr_js
+    @toastr_render
     <script src="{{ asset('assets/js/bootstrap.bundle.min.js') }}"></script>
     <!--plugins-->
     <script src="{{ asset('assets/js/jquery.min.js') }}"></script>
