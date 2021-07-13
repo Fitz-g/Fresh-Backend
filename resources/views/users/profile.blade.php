@@ -22,7 +22,6 @@
 @endsection
 
 @section('content')
-    <!--end breadcrumb-->
     <div class="container">
         <div class="main-body">
             <div class="row">

@@ -30,6 +30,7 @@ Route::middleware('auth')->group(function() {
     Route::post("/update-avatar", [Controllers\UserController::class, 'update_avatar'])->name('update.avatar');
     Route::post("/update-profile", [Controllers\UserController::class, 'update_profile'])->name('update.profile');
     Route::post("/update-password", [Controllers\UserController::class, 'update_password'])->name('update.password');
+    Route::get("/users", [Controllers\UserController::class, 'index'])->name('users.index');
 });
 
 

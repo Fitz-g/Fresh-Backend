@@ -27,7 +27,7 @@
             </a>
             <ul>
                 <li>
-                    <a href="#"><i class="bx bx-right-arrow-alt"></i>Créer un User</a>
+                    <a href="{{ route('users.index') }}"><i class="bx bx-right-arrow-alt"></i>Créer un User</a>
                 </li>
                 <li>
                     <a href="#"><i class="bx bx-right-arrow-alt"></i>Liste des Users</a>
